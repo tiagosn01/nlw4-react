@@ -77,12 +77,13 @@
   background: var(--white);
   color: var(--text);
   cursor: not-allowed;
+  border-bottom: 6px solid var(--green);
 }
 
 .countdownButtonActive {
   background: var(--white);
   color: var(--title);
-
+ 
 }
 
 .countdownButtonActive:hover {
