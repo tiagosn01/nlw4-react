@@ -7,19 +7,19 @@ import styles from '../styles/components/Countdown.module.css';
 
 export function Countdown() {
 
-  const { 
-    minutes, 
-    seconds, 
-    hasFinished, 
-    isActive, 
-    startCountdown, 
-    resetCountdown 
+  const {
+    minutes,
+    seconds,
+    hasFinished,
+    isActive,
+    startCountdown,
+    resetCountdown
   } = useContext(CountdownContext);
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
   const [secondsLeft, secondsRight] = String(seconds).padStart(2, '0').split('')
 
- 
+
 
   return (
     <div>
@@ -36,7 +36,7 @@ export function Countdown() {
       </div>
 
       { hasFinished ? (
-         <button 
+         <button
          type="button"
          disabled
           className={styles.countdownButton}
@@ -46,17 +46,17 @@ export function Countdown() {
       ) : (
         <>
         { isActive ? (
-          <button 
-            type="button" 
-            className={`${styles.countdownButton} ${styles.countdownButtonActive} `} 
+          <button
+            type="button"
+            className={`${styles.countdownButton} ${styles.countdownButtonActive} `}
             onClick={resetCountdown}
             >
               Abandonar ciclo
         </button>
       ) : (
-          <button 
-            type="button" 
-            className={styles.countdownButton} 
+          <button
+            type="button"
+            className={styles.countdownButton}
             onClick={startCountdown}>
             Iniciar um ciclo
           </button>
@@ -64,9 +64,9 @@ export function Countdown() {
         </>
       )}
 
-      
-      
-     
+
+
+
     </div>
   )
 }

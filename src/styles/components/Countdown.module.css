@@ -83,7 +83,7 @@
 .countdownButtonActive {
   background: var(--white);
   color: var(--title);
- 
+
 }
 
 .countdownButtonActive:hover {

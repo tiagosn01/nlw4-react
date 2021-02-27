@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
     <ExperienceBar />
 
-    <CountdownProvider>      
+    <CountdownProvider>
       <section>
         <div>
           <Profile />
